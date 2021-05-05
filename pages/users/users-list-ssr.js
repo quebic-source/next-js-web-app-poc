@@ -1,3 +1,4 @@
+// import userSWR from 'swr'
 
 function Users({ posts }) {
     return (
