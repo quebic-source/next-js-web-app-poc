@@ -13,5 +13,10 @@ export default function NavBar({ children }) {
                     <a>Users</a>
                 </Link>
             </li>
+            <li>
+                <Link href="/users/users-list-ssr">
+                    <a>Users Server-Side-Render</a>
+                </Link>
+            </li>
         </ul></div>)
 }

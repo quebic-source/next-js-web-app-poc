@@ -1,8 +1,8 @@
 
 function Users({ posts }) {
     return (
-        <div>
-            Users List
+        <div style={{backgroundColor: "blue"}}>
+            Users List SSR
             <ul>
                 {posts.map((post, _index) => (
                     <li key={_index}>{post.name}</li>
@@ -12,7 +12,7 @@ function Users({ posts }) {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     // Call an external API endpoint to get posts.
     // You can use any data fetching library
     const res = await fetch('https://47ttfwe6fd.execute-api.ap-south-1.amazonaws.com/users')
@@ -30,7 +30,6 @@ export async function getStaticProps() {
         props: {
             posts,
         },
-        revalidate: 1000,
     }
 }
 
