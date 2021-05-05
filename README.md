@@ -33,17 +33,18 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-# Deploy on AWS Amplyfy
+## Deploy on AWS Amplyfy
+** https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js#dynamic-routes
 ```
 version: 1
 frontend:
   phases:
     preBuild:
       commands:
-        - yarn install
+        - npm ci
     build:
       commands:
-        - yarn run export
+        - npm run build
   artifacts:
     baseDirectory: out
     files:
@@ -51,4 +52,5 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+
 ```
