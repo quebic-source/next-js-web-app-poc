@@ -16,7 +16,7 @@ function Users({ posts }) {
 export async function getServerSideProps() {
     // Call an external API endpoint to get posts.
     // You can use any data fetching library
-    const res = await fetch('https://47ttfwe6fd.execute-api.ap-south-1.amazonaws.com/users')
+    const res = await fetch('https://v7xf68mhkj.execute-api.ap-south-1.amazonaws.com/users')
     const posts = await res.json()
 
     if (!posts) {
