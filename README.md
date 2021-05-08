@@ -33,24 +33,20 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Deploy on AWS Amplyfy
-** https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js#dynamic-routes
+# Deploy with Serverless Framework
+### Install Serverless Framework (https://www.serverless.com/framework/docs/getting-started#via-npm)
 ```
-version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - npm ci
-    build:
-      commands:
-        - npm run build
-  artifacts:
-    baseDirectory: out
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
+npm install -g serverless
+``` 
+### Read
+#### https://github.com/serverless-nextjs/serverless-next.js
+#### https://www.serverless.com/plugins/serverless-nextjs-plugin
+#### Deploy
+```
+serverless
+```
 
+#### Deleate whole stack
+```
+serverless remove
 ```

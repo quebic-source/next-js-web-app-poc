@@ -1,0 +1,2 @@
+next-js-web-app-poc:
+  component: "@sls-next/serverless-component@1.19.0"
